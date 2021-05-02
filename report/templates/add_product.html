@@ -1,0 +1,9 @@
+{% extends './layout/base.html' %}
+{% block content %}
+    <form method="post" action="/save_product/"
+    enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit" value="Submit">Submit</button>
+    </form>
+{% endblock content %}

@@ -1,0 +1,110 @@
+<html>
+<header>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</header>
+<style>
+    body {
+      background: linear-gradient(
+                    rgba(180, 185, 232, 0.70),
+                   rgba(37, 39, 58, 0.85)
+            ),
+            url('../static/surf-wallpaper.jpg');
+        background-size: cover;
+    }
+
+    .card {
+        border-radius: 15px;
+        margin: 20px 0;
+    }
+
+    .card-header {
+        background: none;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 60vw;
+        padding: 20px;
+        border: 1px solid lightgrey;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 25px;
+        box-shadow: 1px 2px 4px lightgrey;
+    }
+
+    form input {
+        width: 60%;
+        padding: 5px;
+        border: 1px solid lightgrey;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 25px;
+    }
+
+    form input label {
+        width: 60%;
+        padding: 5px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    form button {
+        width: 60%;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 25px;
+        color: white;
+        border: none;
+        background: #3875d7;
+    }
+
+    img {
+        width: 50px;
+        height: 50px;
+    }
+</style>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">SurfJoint</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/members/">Members</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/products/">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/locations/">Locations</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+{% block content %}
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+
+        })
+    </script>
+{% endblock javascripts %}
+</body>
+</html>

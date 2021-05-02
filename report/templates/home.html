@@ -1,0 +1,87 @@
+{% extends './layout/base.html' %}
+
+{% block content %}
+    {% load static %}
+    <div class="container">
+        <div class="row col-12">
+            {# members #}
+            <div class="card members">
+                <div class="card-header">
+                    Members
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Surname</th>
+                            <th scope="col">Age</th>
+                            <th scope="col">Surf Experience</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for member in members %}
+                            <tr>
+                                <td>{{ member.name }}</td>
+                                <td>{{ member.surname }}</td>
+                                <td>{{ member.age }}</td>
+                                <td>{{ member.surf_experience }}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        {#products and locations#}
+        <div class="row col-12 d-flex">
+            <div class="card locations col-8">
+                <div class="card-header">
+                    Locations
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">Country</th>
+                            <th scope="col">City</th>
+                            <th scope="col">Beach</th>
+                            <th scope="col">Annual Shark Attacks</th>
+                            <th scope="col">Required Experience</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for location in locations %}
+                            <tr>
+                                <td>{{ location.country }}</td>
+                                <td>{{ location.city }}</td>
+                                <td>{{ location.beach_name }}</td>
+                                <td>{{ location.anual_shark_attacks }}</td>
+                                <td>{{ location.required_experience }}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card locations col-4">
+                <div class="card-header">
+                    Products
+                </div>
+                <div class="card-body">
+                    <div class="list-group">
+                        <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
+                            The current button
+                        </button>
+                        {% for product in products %}
+                            <button type="button" class="list-group-item list-group-item-action">
+                                {{ product.item }} <img src="{{ product.images }}" >
+                            </button>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

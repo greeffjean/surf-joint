@@ -1,0 +1,14 @@
+[
+  {
+    "model": "report.Members",
+    "pk": 1,
+    "fields": {
+      "name": "Jean",
+      "surname": "Greeff",
+      "age": 27,
+      "address": "12 Lincoln Field Crescent Lakeside",
+      "surf_experiece": "Experienced",
+      "date_joined": "2012-09-04 06:00"
+    }
+  }
+]
